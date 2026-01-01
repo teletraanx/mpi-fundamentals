@@ -1,4 +1,4 @@
-MPI Fundamentals (C++)
+# MPI Fundamentals (C++)
 
 This repository demonstrates fundamental MPI (Message Passing Interface) concepts
 using C++ and OpenMPI. The project focuses on distributed-memory parallelism,
@@ -16,15 +16,15 @@ REQUIREMENTS
 =====================================================================
 
 INSTALLING DEPENDENCIES (UBUNTU)
-
+```
 sudo apt update
 sudo apt install -y build-essential cmake openmpi-bin libopenmpi-dev
-
+```
 Verify MPI is available:
-
+```
 mpirun --version
 mpicxx --version
-
+```
 =====================================================================
 
 REPOSITORY STRUCTURE
@@ -45,12 +45,12 @@ BUILD INSTRUCTIONS
 All programs are built using CMake.
 
 From the project root (mpi-fundamentals):
-
+```
 mkdir -p build
 cd build
 cmake ..
 cmake --build .
-
+```
 This will produce the following executables inside build/:
 
 - hello_mpi
@@ -68,9 +68,9 @@ All programs are launched using mpirun.
 1. HELLO MPI
 
 Demonstrates MPI initialization, rank identification, and multi-process execution.
-
+```
 mpirun -np 4 ./hello_mpi
-
+```
 Each process prints:
 - Its rank
 - The total number of MPI ranks
@@ -82,9 +82,9 @@ Each process prints:
 
 Each MPI rank computes a partial sum of a vector segment. Partial results are
 combined using MPI_Reduce.
-
+```
 mpirun -np 4 ./vector_sum
-
+```
 Output includes:
 - The global sum
 - Elapsed execution time measured using MPI_Wtime()
@@ -98,9 +98,9 @@ Implements a distributed matrix multiplication using MPI collective operations:
 - MPI_Bcast to distribute matrix B
 - MPI_Scatter to distribute rows of matrix A
 - MPI_Gather to collect the result matrix
-
+```
 mpirun -np 4 ./matmul
-
+```
 Output includes:
 - A checksum of the result matrix for correctness
 - Elapsed execution time measured using MPI_Wtime()
