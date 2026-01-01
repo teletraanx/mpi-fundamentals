@@ -28,7 +28,7 @@ mpicxx --version
 =====================================================================
 
 REPOSITORY STRUCTURE
-
+```
 mpi-fundamentals/
 ├── src/
 │   ├── hello_mpi.cpp
@@ -37,7 +37,7 @@ mpi-fundamentals/
 ├── CMakeLists.txt
 ├── README.md
 └── build/    (generated, not tracked in git)
-
+```
 =====================================================================
 
 BUILD INSTRUCTIONS
