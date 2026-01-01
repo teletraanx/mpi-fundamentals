@@ -1,0 +1,16 @@
+# build artifacts
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled binaries
+hello_mpi
+vector_sum
+matmul
+
+# Other
+*.swp
+*~
+.DS_Store
