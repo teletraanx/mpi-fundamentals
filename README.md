@@ -105,10 +105,4 @@ Output includes:
 - A checksum of the result matrix for correctness
 - Elapsed execution time measured using MPI_Wtime()
 
-=====================================================================
-
-=====================================================================
-
-LICENSE
-
-This project is provided for educational and demonstration purposes.
+===================================================================
